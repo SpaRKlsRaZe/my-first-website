@@ -84,7 +84,7 @@ export default function Page() {
           <svg viewBox="0 0 24 24" aria-hidden="true" className="mark-icon">
             <path d="M8 3v8a4 4 0 0 0 8 0V3M12 15v6M9 21h6" />
           </svg>
-          Hammerwell
+          Prackt
         </a>
         <ul>
           <li><a href="#services">Services</a></li>
@@ -125,7 +125,7 @@ export default function Page() {
               </p>
             </div>
             <div className="record-sign">
-              <p><span className="label">Technician</span><span className="signature" aria-label="Signed">J. Hammerwell</span></p>
+              <p><span className="label">Technician</span><span className="signature" aria-label="Signed">Prackt · J.M.</span></p>
               <p><span className="label">Next visit due</span><span className="typed">May 2027</span></p>
             </div>
           </div>
@@ -170,10 +170,10 @@ export default function Page() {
           <a className="submit close-cta" href="#request">Fill in the request sheet</a>
           <dl className="contacts">
             <div><dt>Phone</dt><dd>(555) 010-0418</dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:hello@hammerwell.example">hello@hammerwell.example</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:hello@prackt.example">hello@prackt.example</a></dd></div>
             <div><dt>Hours</dt><dd>Mon–Sat, 8:00–18:00</dd></div>
           </dl>
-          <p className="fiction">Hammerwell Piano Care is a fictional business. This site is a design demo, and every name, number and record on it is placeholder content.</p>
+          <p className="fiction">The phone number, email address, opening hours, availability and sample record on this page are placeholder content.</p>
         </div>
       </footer>
     </>

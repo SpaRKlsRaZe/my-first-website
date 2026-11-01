@@ -2,7 +2,7 @@
 
 <!-- impeccable:product-schema 1 -->
 
-> **Fictional placeholder.** The user asked for an invented service business to stand in until the real one is supplied. Every name, place, service, and contact detail below is synthetic and must be replaced, not shipped as fact.
+> **Partly placeholder.** The business name **Prackt** is confirmed by the user. Everything else marked synthetic below (services, positioning, contact details, sample data) was invented as a stand-in and must be replaced, not shipped as fact.
 
 ## Platform
 
@@ -14,7 +14,7 @@ Next.js (React), chosen by the user. Static export so it can be hosted anywhere 
 
 ## Product
 
-**Hammerwell Piano Care** (fictional) — a two-person piano technician practice offering tuning, regulation, repair, and restoration for acoustic pianos in homes, schools, churches, and small venues.
+**Prackt** — a two-person (synthetic) piano technician practice offering tuning, regulation, repair, and restoration for acoustic pianos in homes, schools, churches, and small venues.
 
 - **Primary user:** someone responsible for an acoustic piano that sounds or plays wrong — a parent whose child practises on a drifting upright, a music teacher, a venue or school manager. They are looking for a trustworthy technician and want to book a visit.
 - **Job:** understand what service the piano needs, trust that the technician knows what they are doing, and book a visit.
@@ -29,10 +29,15 @@ Next.js (React), chosen by the user. Static export so it can be hosted anywhere 
 - Repairs (sticking keys, broken strings, pedals)
 - Restoration (consultation, workshop work)
 
+## Brand commitments
+
+- **Name:** Prackt (confirmed by the user, 2026-11-01).
+- **Theme:** premium, ultra-modern dark theme, pinned by the user on 2026-11-01. It replaces the earlier canary/pink/green palette entirely. Deep slate grey backgrounds, crisp white type, and electric blue as the primary brand accent. Exact values live in DESIGN.md.
+
 ## Constraints
 
 - No invented prices, customer names, testimonials, review scores, or certifications presented as real. Where the page needs them, mark them clearly as placeholders.
-- Contact details are placeholders (example.com address, 555 number).
+- Contact details are placeholders (prackt.example address, 555 number).
 
 ## Accessibility
 
@@ -40,4 +45,5 @@ WCAG 2.1 AA target: readable contrast, keyboard-operable booking form, respects 
 
 ## Open decisions
 
-- Real business identity, service area, pricing, and contact details — to be supplied by the user.
+- Whether Prackt is the piano-care service described here or a different kind of agency: the user called it "our agency"; services are unchanged until they say otherwise.
+- Service area, pricing, and contact details — to be supplied by the user.

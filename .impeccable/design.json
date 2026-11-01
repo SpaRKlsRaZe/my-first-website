@@ -1,215 +1,197 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T23:42:49.943051+00:00",
-  "title": "Design System: Hammerwell Piano Care",
+  "generatedAt": "2026-11-01T23:50:10.098761+00:00",
+  "title": "Design System: Prackt",
   "extensions": {
     "colorMeta": {
-      "canary": {
-        "role": "neutral",
-        "displayName": "Canary Carbon",
-        "canonical": "#f2d04b",
-        "approxOklch": "oklch(86% 0.15 95)",
+      "electric": {
+        "role": "primary",
+        "displayName": "Electric Blue",
+        "canonical": "#2e6bff",
+        "approxOklch": "oklch(57% 0.23 264)",
         "tonalRamp": [
-          "oklch(15% 0.068 95)",
-          "oklch(25% 0.089 95)",
-          "oklch(35% 0.109 95)",
-          "oklch(45% 0.130 95)",
-          "oklch(55% 0.150 95)",
-          "oklch(70% 0.119 95)",
-          "oklch(85% 0.089 95)",
-          "oklch(95% 0.068 95)"
+          "oklch(15% 0.104 264)",
+          "oklch(25% 0.138 264)",
+          "oklch(35% 0.173 264)",
+          "oklch(45% 0.207 264)",
+          "oklch(55% 0.230 264)",
+          "oklch(70% 0.184 264)",
+          "oklch(85% 0.138 264)",
+          "oklch(95% 0.104 264)"
         ]
       },
-      "canary-deep": {
-        "role": "neutral",
-        "displayName": "Deep Canary",
-        "canonical": "#e4bf2f",
-        "approxOklch": "oklch(81% 0.16 93)",
+      "electric-hover": {
+        "role": "primary",
+        "displayName": "Pressed Electric",
+        "canonical": "#2259e8",
+        "approxOklch": "oklch(52% 0.22 265)",
         "tonalRamp": [
-          "oklch(15% 0.073 93)",
-          "oklch(25% 0.095 93)",
-          "oklch(35% 0.116 93)",
-          "oklch(45% 0.138 93)",
-          "oklch(55% 0.160 93)",
-          "oklch(70% 0.127 93)",
-          "oklch(85% 0.095 93)",
-          "oklch(95% 0.073 93)"
+          "oklch(15% 0.099 265)",
+          "oklch(25% 0.132 265)",
+          "oklch(35% 0.165 265)",
+          "oklch(45% 0.198 265)",
+          "oklch(55% 0.220 265)",
+          "oklch(70% 0.176 265)",
+          "oklch(85% 0.132 265)",
+          "oklch(95% 0.099 265)"
+        ]
+      },
+      "electric-text": {
+        "role": "primary",
+        "displayName": "Electric Ink",
+        "canonical": "#6ea2ff",
+        "approxOklch": "oklch(70% 0.15 260)",
+        "tonalRamp": [
+          "oklch(15% 0.068 260)",
+          "oklch(25% 0.090 260)",
+          "oklch(35% 0.112 260)",
+          "oklch(45% 0.135 260)",
+          "oklch(55% 0.150 260)",
+          "oklch(70% 0.120 260)",
+          "oklch(85% 0.090 260)",
+          "oklch(95% 0.068 260)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "#ff7a70",
+        "approxOklch": "oklch(72% 0.17 25)",
+        "tonalRamp": [
+          "oklch(15% 0.077 25)",
+          "oklch(25% 0.102 25)",
+          "oklch(35% 0.128 25)",
+          "oklch(45% 0.153 25)",
+          "oklch(55% 0.170 25)",
+          "oklch(70% 0.136 25)",
+          "oklch(85% 0.102 25)",
+          "oklch(95% 0.077 25)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Deep Slate",
+        "canonical": "#0f141a",
+        "approxOklch": "oklch(18% 0.015 250)",
+        "tonalRamp": [
+          "oklch(15% 0.007 250)",
+          "oklch(25% 0.009 250)",
+          "oklch(35% 0.011 250)",
+          "oklch(45% 0.013 250)",
+          "oklch(55% 0.015 250)",
+          "oklch(70% 0.012 250)",
+          "oklch(85% 0.009 250)",
+          "oklch(95% 0.007 250)"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Deepest Slate",
+        "canonical": "#0a0d12",
+        "approxOklch": "oklch(15% 0.012 255)",
+        "tonalRamp": [
+          "oklch(15% 0.005 255)",
+          "oklch(25% 0.007 255)",
+          "oklch(35% 0.009 255)",
+          "oklch(45% 0.011 255)",
+          "oklch(55% 0.012 255)",
+          "oklch(70% 0.010 255)",
+          "oklch(85% 0.007 255)",
+          "oklch(95% 0.005 255)"
         ]
       },
       "sheet": {
         "role": "neutral",
-        "displayName": "Top-Sheet White",
-        "canonical": "#fbfbf7",
-        "approxOklch": "oklch(98.6% 0.006 110)",
+        "displayName": "Raised Slate",
+        "canonical": "#19212b",
+        "approxOklch": "oklch(24% 0.022 250)",
         "tonalRamp": [
-          "oklch(15% 0.003 110)",
-          "oklch(25% 0.004 110)",
-          "oklch(35% 0.004 110)",
-          "oklch(45% 0.005 110)",
-          "oklch(55% 0.006 110)",
-          "oklch(70% 0.005 110)",
-          "oklch(85% 0.004 110)",
-          "oklch(95% 0.003 110)"
+          "oklch(15% 0.010 250)",
+          "oklch(25% 0.013 250)",
+          "oklch(35% 0.017 250)",
+          "oklch(45% 0.020 250)",
+          "oklch(55% 0.022 250)",
+          "oklch(70% 0.018 250)",
+          "oklch(85% 0.013 250)",
+          "oklch(95% 0.010 250)"
         ]
       },
-      "pink": {
+      "copy": {
         "role": "neutral",
-        "displayName": "Customer-Copy Pink",
-        "canonical": "#f3b3c1",
-        "approxOklch": "oklch(82% 0.08 5)",
+        "displayName": "Copy Slate",
+        "canonical": "#1f2a37",
+        "approxOklch": "oklch(27% 0.03 252)",
         "tonalRamp": [
-          "oklch(15% 0.036 5)",
-          "oklch(25% 0.047 5)",
-          "oklch(35% 0.058 5)",
-          "oklch(45% 0.069 5)",
-          "oklch(55% 0.080 5)",
-          "oklch(70% 0.064 5)",
-          "oklch(85% 0.047 5)",
-          "oklch(95% 0.036 5)"
+          "oklch(15% 0.013 252)",
+          "oklch(25% 0.018 252)",
+          "oklch(35% 0.022 252)",
+          "oklch(45% 0.027 252)",
+          "oklch(55% 0.030 252)",
+          "oklch(70% 0.024 252)",
+          "oklch(85% 0.018 252)",
+          "oklch(95% 0.013 252)"
         ]
       },
-      "pink-deep": {
+      "text": {
         "role": "neutral",
-        "displayName": "Deep Copy Pink",
-        "canonical": "#e597a8",
-        "approxOklch": "oklch(75% 0.10 5)",
+        "displayName": "Crisp White",
+        "canonical": "#f4f6f9",
+        "approxOklch": "oklch(97% 0.004 250)",
         "tonalRamp": [
-          "oklch(15% 0.045 5)",
-          "oklch(25% 0.059 5)",
-          "oklch(35% 0.073 5)",
-          "oklch(45% 0.086 5)",
-          "oklch(55% 0.100 5)",
-          "oklch(70% 0.080 5)",
-          "oklch(85% 0.059 5)",
-          "oklch(95% 0.045 5)"
+          "oklch(15% 0.002 250)",
+          "oklch(25% 0.002 250)",
+          "oklch(35% 0.003 250)",
+          "oklch(45% 0.004 250)",
+          "oklch(55% 0.004 250)",
+          "oklch(70% 0.003 250)",
+          "oklch(85% 0.002 250)",
+          "oklch(95% 0.002 250)"
         ]
       },
-      "print": {
-        "role": "primary",
-        "displayName": "Form-Green Print Ink",
-        "canonical": "#1d5a48",
-        "approxOklch": "oklch(42% 0.07 170)",
-        "tonalRamp": [
-          "oklch(15% 0.032 170)",
-          "oklch(25% 0.041 170)",
-          "oklch(35% 0.051 170)",
-          "oklch(45% 0.060 170)",
-          "oklch(55% 0.070 170)",
-          "oklch(70% 0.056 170)",
-          "oklch(85% 0.041 170)",
-          "oklch(95% 0.032 170)"
-        ]
-      },
-      "print-deep": {
-        "role": "primary",
-        "displayName": "Deep Print Ink",
-        "canonical": "#154638",
-        "approxOklch": "oklch(36% 0.06 170)",
-        "tonalRamp": [
-          "oklch(15% 0.027 170)",
-          "oklch(25% 0.035 170)",
-          "oklch(35% 0.044 170)",
-          "oklch(45% 0.052 170)",
-          "oklch(55% 0.060 170)",
-          "oklch(70% 0.048 170)",
-          "oklch(85% 0.035 170)",
-          "oklch(95% 0.027 170)"
-        ]
-      },
-      "print-soft": {
-        "role": "primary",
-        "displayName": "Faded Print Ink",
-        "canonical": "#4d7c6d",
-        "approxOklch": "oklch(55% 0.05 170)",
-        "tonalRamp": [
-          "oklch(15% 0.023 170)",
-          "oklch(25% 0.030 170)",
-          "oklch(35% 0.036 170)",
-          "oklch(45% 0.043 170)",
-          "oklch(55% 0.050 170)",
-          "oklch(70% 0.040 170)",
-          "oklch(85% 0.030 170)",
-          "oklch(95% 0.023 170)"
-        ]
-      },
-      "sheet-on-print": {
+      "text-soft": {
         "role": "neutral",
-        "displayName": "Sheet-on-Print",
-        "canonical": "#d6e4dd",
-        "approxOklch": "oklch(90% 0.02 165)",
+        "displayName": "Soft White",
+        "canonical": "#a7b2c0",
+        "approxOklch": "oklch(76% 0.025 255)",
         "tonalRamp": [
-          "oklch(15% 0.009 165)",
-          "oklch(25% 0.012 165)",
-          "oklch(35% 0.015 165)",
-          "oklch(45% 0.017 165)",
-          "oklch(55% 0.020 165)",
-          "oklch(70% 0.016 165)",
-          "oklch(85% 0.012 165)",
-          "oklch(95% 0.009 165)"
+          "oklch(15% 0.011 255)",
+          "oklch(25% 0.015 255)",
+          "oklch(35% 0.019 255)",
+          "oklch(45% 0.023 255)",
+          "oklch(55% 0.025 255)",
+          "oklch(70% 0.020 255)",
+          "oklch(85% 0.015 255)",
+          "oklch(95% 0.011 255)"
         ]
       },
-      "carbon": {
-        "role": "secondary",
-        "displayName": "Carbon Blue",
-        "canonical": "#2b35a0",
-        "approxOklch": "oklch(39% 0.17 272)",
-        "tonalRamp": [
-          "oklch(15% 0.077 272)",
-          "oklch(25% 0.100 272)",
-          "oklch(35% 0.124 272)",
-          "oklch(45% 0.147 272)",
-          "oklch(55% 0.170 272)",
-          "oklch(70% 0.135 272)",
-          "oklch(85% 0.100 272)",
-          "oklch(95% 0.077 272)"
-        ]
-      },
-      "stamp": {
-        "role": "tertiary",
-        "displayName": "Rubber-Stamp Red",
-        "canonical": "#c7352a",
-        "approxOklch": "oklch(54% 0.18 30)",
-        "tonalRamp": [
-          "oklch(15% 0.082 30)",
-          "oklch(25% 0.106 30)",
-          "oklch(35% 0.131 30)",
-          "oklch(45% 0.155 30)",
-          "oklch(55% 0.180 30)",
-          "oklch(70% 0.143 30)",
-          "oklch(85% 0.106 30)",
-          "oklch(95% 0.082 30)"
-        ]
-      },
-      "ink": {
+      "hairline": {
         "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#17201c",
-        "approxOklch": "oklch(23% 0.015 160)",
+        "displayName": "Hairline",
+        "canonical": "rgb(255 255 255 / 0.16)",
         "tonalRamp": [
-          "oklch(15% 0.007 160)",
-          "oklch(25% 0.009 160)",
-          "oklch(35% 0.011 160)",
-          "oklch(45% 0.013 160)",
-          "oklch(55% 0.015 160)",
-          "oklch(70% 0.012 160)",
-          "oklch(85% 0.009 160)",
-          "oklch(95% 0.007 160)"
+          "rgb(255 255 255 / 0.06)",
+          "rgb(255 255 255 / 0.1)",
+          "rgb(255 255 255 / 0.16)",
+          "rgb(255 255 255 / 0.24)",
+          "rgb(255 255 255 / 0.35)",
+          "rgb(255 255 255 / 0.45)",
+          "rgb(255 255 255 / 0.55)",
+          "rgb(255 255 255 / 0.7)"
         ]
       },
-      "ink-soft": {
+      "hairline-strong": {
         "role": "neutral",
-        "displayName": "Soft Ink",
-        "canonical": "#3c4a43",
-        "approxOklch": "oklch(39% 0.02 160)",
+        "displayName": "Strong Hairline",
+        "canonical": "rgb(255 255 255 / 0.55)",
         "tonalRamp": [
-          "oklch(15% 0.009 160)",
-          "oklch(25% 0.012 160)",
-          "oklch(35% 0.015 160)",
-          "oklch(45% 0.017 160)",
-          "oklch(55% 0.020 160)",
-          "oklch(70% 0.016 160)",
-          "oklch(85% 0.012 160)",
-          "oklch(95% 0.009 160)"
+          "rgb(255 255 255 / 0.06)",
+          "rgb(255 255 255 / 0.1)",
+          "rgb(255 255 255 / 0.16)",
+          "rgb(255 255 255 / 0.24)",
+          "rgb(255 255 255 / 0.35)",
+          "rgb(255 255 255 / 0.45)",
+          "rgb(255 255 255 / 0.55)",
+          "rgb(255 255 255 / 0.7)"
         ]
       }
     },
@@ -228,41 +210,36 @@
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running text in ink; ledes in ink-soft at about 1.08rem; measure 44-72ch."
+        "purpose": "Running text in white; ledes in soft white at about 1.08rem; measure 44-72ch."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Printed field labels and dt terms, uppercase, width 85%."
+        "purpose": "White printed field labels and dt terms, uppercase, width 85%."
       },
       "typed": {
         "displayName": "Typed",
-        "purpose": "Courier Prime carbon values: fields, copy, record values, day numbers, log times; italic for the signature."
+        "purpose": "Courier Prime electric-ink values: fields, copy, record values, day numbers, log times; italic for the signature. White for form numbers and the Tear here mark."
       },
       "stamp": {
         "displayName": "Stamp",
-        "purpose": "The RECEIVED stamp only, uppercase, width 70%."
+        "purpose": "The RECEIVED stamp only, uppercase, width 70%, electric ink."
       }
     },
     "shadows": [
       {
-        "name": "paper-on-canary",
-        "value": "0 1px 1px rgb(60 45 0 / 0.12), 0 14px 32px -12px rgb(70 52 0 / 0.35)",
-        "purpose": "Every paper sheet on the canary ground."
+        "name": "lifted-sheet",
+        "value": "0 1px 0 rgb(255 255 255 / 0.06) inset, 0 18px 40px -16px rgb(0 0 0 / 0.7)",
+        "purpose": "Every sheet on the slate ground: lit top edge plus deep black drop."
       },
       {
-        "name": "printed-button",
-        "value": "0 6px 14px -6px rgb(29 90 72 / 0.6)",
+        "name": "electric-glow",
+        "value": "0 8px 20px -8px rgb(46 107 255 / 0.55)",
         "purpose": "Primary button at rest."
       },
       {
-        "name": "printed-button-hover",
-        "value": "0 10px 18px -8px rgb(29 90 72 / 0.7)",
+        "name": "electric-glow-hover",
+        "value": "0 12px 24px -10px rgb(46 107 255 / 0.6)",
         "purpose": "Primary button hover, with a 1px lift."
-      },
-      {
-        "name": "carbon-transfer",
-        "value": "text-shadow: 0 0 0.6px rgb(43 53 160 / 0.7)",
-        "purpose": "Carbon-ink text on the customer copy, at opacity 0.88."
       }
     ],
     "motion": [
@@ -273,7 +250,7 @@
       },
       {
         "name": "tear-off",
-        "value": "transform/opacity/clip-path 900ms cubic-bezier(0.16, 1, 0.3, 1); to translate(-6%, -40px) rotate(-5deg), opacity 0",
+        "value": "transform/opacity 900ms cubic-bezier(0.16, 1, 0.3, 1); to translate(-6%, -40px) rotate(-5deg), opacity 0",
         "purpose": "Top sheet tears away on submit. Reduced motion: 200ms linear fade."
       },
       {
@@ -323,77 +300,82 @@
       "refersTo": "button-primary",
       "description": "The one pressable printed control: submit the request, jump to the form.",
       "html": "<button class=\"ds-btn-primary\">Request this visit</button>",
-      "css": ".ds-btn-primary{appearance:none;border:0;border-radius:0;cursor:pointer;background:#1d5a48;color:#fbfbf7;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-weight:750;font-stretch:82%;font-size:1.12rem;letter-spacing:0.01em;padding:15px 26px 14px;box-shadow:0 6px 14px -6px rgb(29 90 72 / 0.6);transition:background 160ms ease, transform 160ms cubic-bezier(0.16,1,0.3,1), box-shadow 160ms ease}.ds-btn-primary:hover{background:#154638;transform:translateY(-1px);box-shadow:0 10px 18px -8px rgb(29 90 72 / 0.7)}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid #2b35a0;outline-offset:3px}"
+      "css": ".ds-btn-primary{appearance:none;border:0;border-radius:0;cursor:pointer;background:var(--electric, #2e6bff);color:#fff;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-weight:750;font-stretch:82%;font-size:1.12rem;letter-spacing:0.01em;padding:15px 26px 14px;box-shadow:0 8px 20px -8px rgb(46 107 255 / 0.55);transition:background 160ms ease, transform 160ms cubic-bezier(0.16,1,0.3,1), box-shadow 160ms ease}.ds-btn-primary:hover{background:var(--electric-hover, #2259e8);transform:translateY(-1px);box-shadow:0 12px 24px -10px rgb(46 107 255 / 0.6)}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid var(--electric-text, #6ea2ff);outline-offset:3px}"
     },
     {
       "name": "Link Button",
       "kind": "button",
       "refersTo": "button-link",
-      "description": "Secondary text action in carbon blue.",
+      "description": "Secondary text action in electric ink.",
       "html": "<button class=\"ds-btn-link\">Fill in another</button>",
-      "css": ".ds-btn-link{background:none;border:0;padding:4px 0;color:#2b35a0;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:1.0625rem;font-weight:600;text-decoration:underline;text-underline-offset:0.2em;text-decoration-thickness:1px;cursor:pointer}.ds-btn-link:focus-visible{outline:2px solid #2b35a0;outline-offset:3px}"
+      "css": ".ds-btn-link{background:none;border:0;padding:4px 0;color:var(--electric-text, #6ea2ff);font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:1.0625rem;font-weight:600;text-decoration:underline;text-underline-offset:0.2em;text-decoration-thickness:1px;cursor:pointer}.ds-btn-link:focus-visible{outline:2px solid var(--electric-text, #6ea2ff);outline-offset:3px}"
     },
     {
       "name": "Boxed Field",
       "kind": "input",
       "refersTo": "field",
-      "description": "A hairline form cell with a printed label and a dashed write-in line typed in carbon.",
+      "description": "A hairline form cell with a white printed label and a dashed write-in line typed in electric ink.",
       "html": "<label class=\"ds-cell\"><span class=\"ds-label\">Your name</span><input class=\"ds-field\" placeholder=\"e.g. Priya Shah\"></label><label class=\"ds-cell\"><span class=\"ds-label\">Phone or email</span><input class=\"ds-field\" aria-invalid=\"true\" value=\"priya@\"><span class=\"ds-error\">Add a phone number or email.</span></label>",
-      "css": ".ds-cell{display:block;background:#fbfbf7;border:1px solid #1d5a48;padding:10px 12px 12px;max-width:320px}.ds-label{display:block;margin-bottom:8px;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.72rem;font-weight:650;font-stretch:85%;letter-spacing:0.08em;text-transform:uppercase;color:#1d5a48}.ds-field{width:100%;border:0;border-bottom:1px dashed #4d7c6d;background:transparent;border-radius:0;font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);font-size:1.1rem;color:#2b35a0;padding:4px 0 3px;caret-color:#c7352a}.ds-field::placeholder{color:#6f7f78;font-style:italic}.ds-field:focus{outline:none;border-bottom:1.5px solid #2b35a0}.ds-field[aria-invalid=true]{border-bottom:1.5px solid #c7352a}.ds-error{display:block;margin-top:8px;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.86rem;font-weight:600;color:#c7352a}"
+      "css": ".ds-cell{display:block;background:var(--sheet, #19212b);border:1px solid rgb(255 255 255 / 0.16);padding:10px 12px 12px;max-width:320px}.ds-label{display:block;margin-bottom:8px;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.72rem;font-weight:650;font-stretch:85%;letter-spacing:0.08em;text-transform:uppercase;color:var(--text, #f4f6f9)}.ds-field{width:100%;border:0;border-bottom:1px dashed var(--text-soft, #a7b2c0);background:transparent;border-radius:0;font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);font-size:1.1rem;color:var(--electric-text, #6ea2ff);padding:4px 0 3px;caret-color:var(--electric-text, #6ea2ff)}.ds-field::placeholder{color:#7d8896;font-style:italic}.ds-field:focus{outline:none;border-bottom:1.5px solid var(--electric-text, #6ea2ff)}.ds-field[aria-invalid=true]{border-bottom:1.5px solid var(--error, #ff7a70)}.ds-error{display:block;margin-top:8px;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.86rem;font-weight:600;color:var(--error, #ff7a70)}"
     },
     {
       "name": "Tick Box",
       "kind": "input",
       "refersTo": "tick",
-      "description": "Printed square or circle filled with a carbon mark when chosen.",
+      "description": "Printed square or circle filled with an electric-ink mark when chosen.",
       "html": "<label class=\"ds-tick\"><input type=\"checkbox\" checked> Tuning</label><label class=\"ds-tick\"><input type=\"radio\" name=\"p\" checked> Upright</label><label class=\"ds-tick\"><input type=\"radio\" name=\"p\"> Grand</label>",
-      "css": ".ds-tick{display:inline-flex;align-items:center;gap:8px;min-height:32px;margin-right:18px;cursor:pointer;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-weight:500;font-stretch:92%;color:#17201c}.ds-tick input{appearance:none;margin:0;width:18px;height:18px;border:1.5px solid #1d5a48;background:#fbfbf7;display:grid;place-content:center;cursor:pointer}.ds-tick input[type=radio]{border-radius:50%}.ds-tick input::after{content:'';width:10px;height:10px;transform:scale(0);transition:transform 160ms cubic-bezier(0.16,1,0.3,1);background:#2b35a0}.ds-tick input[type=radio]::after{border-radius:50%}.ds-tick input[type=checkbox]::after{width:12px;height:12px;clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}.ds-tick input:checked::after{transform:scale(1)}.ds-tick:hover input{border-color:#2b35a0}.ds-tick input:focus-visible{outline:2px solid #2b35a0;outline-offset:3px}"
+      "css": ".ds-tick{display:inline-flex;align-items:center;gap:8px;min-height:32px;margin-right:18px;cursor:pointer;font-family:var(--font-print, Archivo, system-ui, sans-serif);font-weight:500;font-stretch:92%;color:var(--text, #f4f6f9)}.ds-tick input{appearance:none;margin:0;width:18px;height:18px;border:1.5px solid var(--text-soft, #a7b2c0);background:var(--sheet, #19212b);display:grid;place-content:center;cursor:pointer}.ds-tick input[type=radio]{border-radius:50%}.ds-tick input::after{content:'';width:10px;height:10px;transform:scale(0);transition:transform 160ms cubic-bezier(0.16,1,0.3,1);background:var(--electric-text, #6ea2ff)}.ds-tick input[type=radio]::after{border-radius:50%}.ds-tick input[type=checkbox]::after{width:12px;height:12px;clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}.ds-tick input:checked::after{transform:scale(1)}.ds-tick:hover input{border-color:var(--electric-text, #6ea2ff)}.ds-tick input:focus-visible{outline:2px solid var(--electric-text, #6ea2ff);outline-offset:3px}"
     },
     {
       "name": "Day Strip",
       "kind": "custom",
       "refersTo": "day-selected",
-      "description": "The diary as hairline boxes: open, selected (carbon fill, stamp frame) and booked (struck through).",
+      "description": "The diary as hairline boxes: open, selected (electric fill, white inner frame) and booked (struck through).",
       "html": "<div class=\"ds-days\"><label class=\"ds-day\"><input type=\"radio\" name=\"d\"><span class=\"ds-wk\">Mon</span><span class=\"ds-num\">2</span><span class=\"ds-wk\">Nov</span></label><label class=\"ds-day ds-day-off\"><span class=\"ds-wk\">Tue</span><span class=\"ds-num\">3</span><span class=\"ds-wk\">Nov</span></label><label class=\"ds-day\"><input type=\"radio\" name=\"d\" checked><span class=\"ds-wk\">Wed</span><span class=\"ds-num\">4</span><span class=\"ds-wk\">Nov</span></label></div>",
-      "css": ".ds-days{display:grid;grid-template-columns:repeat(3,64px);border-left:1px solid #1d5a48;background:#fbfbf7}.ds-day{position:relative;display:flex;flex-direction:column;align-items:center;padding:8px 2px 6px;border:1px solid #1d5a48;border-left:0;cursor:pointer;line-height:1.1;transition:background 140ms ease}.ds-day input{position:absolute;inset:0;opacity:0;margin:0;cursor:inherit}.ds-wk{font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.68rem;font-weight:600;font-stretch:85%;letter-spacing:0.06em;text-transform:uppercase;color:#4d7c6d}.ds-num{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);font-size:1.35rem;color:#2b35a0;margin:2px 0}.ds-day:not(.ds-day-off):hover{background:rgb(43 53 160 / 0.06)}.ds-day:has(input:focus-visible){outline:2px solid #2b35a0;outline-offset:-2px}.ds-day:has(input:checked){background:#2b35a0}.ds-day:has(input:checked) span{color:#fbfbf7}.ds-day:has(input:checked)::after{content:'';position:absolute;inset:3px;border:1.5px solid #c7352a;pointer-events:none}.ds-day-off{cursor:not-allowed}.ds-day-off span{color:rgb(29 90 72 / 0.38)}.ds-day-off::before{content:'';position:absolute;left:10%;right:10%;top:50%;height:1.5px;background:rgb(29 90 72 / 0.55);transform:rotate(-24deg)}"
+      "css": ".ds-days{display:grid;grid-template-columns:repeat(3,64px);border-left:1px solid rgb(255 255 255 / 0.16);background:var(--sheet, #19212b)}.ds-day{position:relative;display:flex;flex-direction:column;align-items:center;padding:8px 2px 6px;border:1px solid rgb(255 255 255 / 0.16);border-left:0;cursor:pointer;line-height:1.1;transition:background 140ms ease}.ds-day input{position:absolute;inset:0;opacity:0;margin:0;cursor:inherit}.ds-wk{font-family:var(--font-print, Archivo, system-ui, sans-serif);font-size:0.68rem;font-weight:600;font-stretch:85%;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-soft, #a7b2c0)}.ds-num{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);font-size:1.35rem;color:var(--electric-text, #6ea2ff);margin:2px 0}.ds-day:not(.ds-day-off):hover{background:rgb(46 107 255 / 0.12)}.ds-day:has(input:focus-visible){outline:2px solid var(--electric-text, #6ea2ff);outline-offset:-2px}.ds-day:has(input:checked){background:var(--electric, #2e6bff)}.ds-day:has(input:checked) span{color:#fff}.ds-day:has(input:checked)::after{content:'';position:absolute;inset:3px;border:1.5px solid rgb(255 255 255 / 0.7);pointer-events:none}.ds-day-off{cursor:not-allowed}.ds-day-off span{color:rgb(255 255 255 / 0.3)}.ds-day-off::before{content:'';position:absolute;left:10%;right:10%;top:50%;height:1.5px;background:rgb(255 255 255 / 0.45);transform:rotate(-24deg)}"
     },
     {
       "name": "Navigation",
       "kind": "nav",
       "refersTo": "label",
-      "description": "Masthead on the canary ground: tuning-fork wordmark and printed-green links.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-mark\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 3v8a4 4 0 0 0 8 0V3M12 15v6M9 21h6\"/></svg>Hammerwell</a><ul><li><a href=\"#\">Services</a></li><li><a href=\"#\">The card</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;background:#f2d04b;font-family:var(--font-print, Archivo, system-ui, sans-serif)}.ds-mark{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-stretch:80%;font-size:1.35rem;letter-spacing:-0.01em;color:#1d5a48;text-decoration:none}.ds-mark svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.ds-nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ds-nav ul a{color:#1d5a48;text-decoration:none;font-weight:600;font-stretch:88%;font-size:0.95rem;padding:6px 0;border-bottom:1px solid transparent}.ds-nav ul a:hover{border-bottom-color:#1d5a48}.ds-nav a:focus-visible{outline:2px solid #2b35a0;outline-offset:3px}"
+      "description": "Masthead on the slate ground: tuning-fork wordmark and white printed links.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-mark\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 3v8a4 4 0 0 0 8 0V3M12 15v6M9 21h6\"/></svg>Prackt</a><ul><li><a href=\"#\">Services</a></li><li><a href=\"#\">The card</a></li><li><a href=\"#\">A visit</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;background:var(--ground, #0f141a);font-family:var(--font-print, Archivo, system-ui, sans-serif)}.ds-mark{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-stretch:80%;font-size:1.35rem;letter-spacing:-0.01em;color:var(--text, #f4f6f9);text-decoration:none}.ds-mark svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.ds-nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ds-nav ul a{color:var(--text, #f4f6f9);text-decoration:none;font-weight:600;font-stretch:88%;font-size:0.95rem;padding:6px 0;border-bottom:1px solid transparent}.ds-nav ul a:hover{border-bottom-color:var(--text, #f4f6f9)}.ds-nav a:focus-visible{outline:2px solid var(--electric-text, #6ea2ff);outline-offset:3px}"
     },
     {
       "name": "Customer Copy Sheet",
       "kind": "card",
       "refersTo": "sheet-copy",
-      "description": "The pink carbon copy: rotated sheet, label/value rows, carbon-ink values and the RECEIVED stamp.",
+      "description": "The customer copy: rotated slate sheet, white label / electric-ink value rows and the RECEIVED stamp.",
       "html": "<aside class=\"ds-copy\"><header class=\"ds-copy-head\"><p class=\"ds-copy-title\">Customer copy</p><p class=\"ds-no\">No. 0418</p></header><dl class=\"ds-rows\"><div><dt>Piano</dt><dd class=\"ds-ink\">Upright</dd></div><div><dt>Service</dt><dd class=\"ds-ink\">Tuning</dd></div></dl><p class=\"ds-stamp\">Received</p></aside>",
-      "css": ".ds-copy{max-width:360px;margin:16px;background:#f3b3c1;padding:28px 28px 32px 32px;transform:rotate(1.4deg);box-shadow:0 1px 1px rgb(60 45 0 / 0.12),0 14px 32px -12px rgb(70 52 0 / 0.35);font-family:var(--font-print, Archivo, system-ui, sans-serif)}.ds-copy-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid rgb(29 90 72 / 0.7);padding-bottom:10px}.ds-copy-head p{margin:0}.ds-copy-title{font-weight:800;font-stretch:78%;color:#1d5a48;font-size:1.05rem}.ds-no{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);color:#1d5a48;font-size:0.95rem;letter-spacing:0.04em}.ds-rows{margin:14px 0 0}.ds-rows>div{display:grid;grid-template-columns:6.5rem 1fr;gap:10px;padding:9px 0;border-bottom:1px solid rgb(29 90 72 / 0.35);align-items:baseline}.ds-rows dt{font-size:0.72rem;font-weight:650;font-stretch:85%;letter-spacing:0.08em;text-transform:uppercase;color:#1d5a48}.ds-rows dd{margin:0}.ds-ink{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);color:#2b35a0;font-size:1.02rem;text-shadow:0 0 0.6px rgb(43 53 160 / 0.7);opacity:0.88}.ds-stamp{display:inline-block;margin:22px 0 0;font-weight:850;font-stretch:70%;font-size:2.6rem;line-height:1;letter-spacing:0.06em;text-transform:uppercase;color:#c7352a;border:3px solid #c7352a;padding:6px 14px 4px;transform:rotate(-7deg);mix-blend-mode:multiply;opacity:0.92}"
+      "css": ".ds-copy{max-width:360px;margin:16px;background:var(--copy, #1f2a37);padding:28px 28px 32px 32px;transform:rotate(1.4deg);box-shadow:0 1px 0 rgb(255 255 255 / 0.06) inset,0 18px 40px -16px rgb(0 0 0 / 0.7);font-family:var(--font-print, Archivo, system-ui, sans-serif);color:var(--text, #f4f6f9)}.ds-copy-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgb(255 255 255 / 0.55);padding-bottom:10px}.ds-copy-head p{margin:0}.ds-copy-title{font-weight:800;font-stretch:78%;font-size:1.05rem}.ds-no{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);font-size:0.95rem;letter-spacing:0.04em}.ds-rows{margin:14px 0 0}.ds-rows>div{display:grid;grid-template-columns:6.5rem 1fr;gap:10px;padding:9px 0;border-bottom:1px solid rgb(255 255 255 / 0.16);align-items:baseline}.ds-rows dt{font-size:0.72rem;font-weight:650;font-stretch:85%;letter-spacing:0.08em;text-transform:uppercase}.ds-rows dd{margin:0}.ds-ink{font-family:var(--font-type, 'Courier Prime', ui-monospace, monospace);color:var(--electric-text, #6ea2ff);font-size:1.02rem;opacity:0.88}.ds-stamp{display:inline-block;margin:22px 0 0;font-weight:850;font-stretch:70%;font-size:2.6rem;line-height:1;letter-spacing:0.06em;text-transform:uppercase;color:var(--electric-text, #6ea2ff);border:3px solid var(--electric-text, #6ea2ff);padding:6px 14px 4px;transform:rotate(-7deg);opacity:0.92}"
     }
   ],
   "narrative": {
     "northStar": "The Service Card",
-    "overview": "The whole system is a snap-out triplicate form. The page itself is the canary carbon copy; content sits on paper sheets laid on top of it: a cool white top sheet you fill in, a pink customer copy fanned slightly behind it. Everything printed on the form (rules, labels, headings, the masthead) is one form-green ink. Everything a person writes onto the form (field entries, dates, data values, the signature) is carbon blue in Courier Prime. Rubber-stamp red marks state and the technician's hand.\n\nDensity is that of a real form. Information sits in boxes drawn with 1px hairlines, labels are small condensed caps printed above each box, and headlines are heavy and very narrow so they fit the way type fits on a printed form. Depth comes from paper: sheets cast soft, warm shadows onto the yellow ground and sit at slight rotations. Motion is physical and rare: entries transfer onto the copy as you type, and on submit the top sheet tears away along its perforation and the copy is stamped.\n\nCorners are square everywhere. There is no rounded card language, no gradient, and no photography; the only illustration is drawn data (the 88-key pitch chart).",
+    "overview": "The whole system is a snap-out triplicate form, set in a premium dark theme. The page is a deep slate ground; content sits on raised slate sheets laid on top of it: a top sheet you fill in, and a cooler customer copy fanned slightly behind it. Everything printed on the form (rules, labels, headings, the masthead) is crisp white. Everything a person writes onto the form (field entries, dates, data values, the signature) is electric blue in Courier Prime. Solid electric blue is the brand accent and marks the few things you press or choose. Red appears only when something is wrong.\n\nDensity is that of a real form. Information sits in boxes drawn with 1px translucent white hairlines, labels are small condensed caps printed above each box, and headlines are heavy and very narrow so they fit the way type fits on a printed form. Depth comes from sheets lifting off the dark ground: a faint lit top edge and a deep black drop shadow, at slight rotations. Motion is physical and rare: entries transfer onto the copy as you type, and on submit the top sheet tears away along its perforation and the copy is stamped RECEIVED.\n\nCorners are square everywhere. There is no rounded card language, no gradient fill, and no photography; the only illustration is drawn data (the 88-key pitch chart).",
     "keyCharacteristics": [
-      "Canary ground, white and pink paper sheets on top of it.",
-      "Two inks with fixed meanings: form-green is printed, carbon blue is filled in.",
+      "Deep slate ground, two raised slate sheets on top of it.",
+      "White printed type, electric-blue filled-in values; solid electric blue for the brand accent.",
       "Archivo condensed via its width axis for print; Courier Prime for everything typed.",
       "Hairline-boxed form grids; square corners throughout.",
-      "Perforations, numbered stubs, slight sheet rotations, soft paper shadows.",
-      "Stamp red reserved for state and hand marks."
+      "Perforations, numbered stubs, slight sheet rotations, deep sheet shadows with a lit top edge.",
+      "Red reserved for errors."
     ],
     "rules": [
       {
-        "name": "The Two Inks Rule",
-        "body": "Printed things are form-green; filled-in things are carbon blue in Courier Prime. If a value was written by a person (or stands in for one), it is carbon. If it would be printed on a blank form, it is green.",
+        "name": "The White Print, Blue Fill Rule",
+        "body": "Printed things are crisp white Archivo; filled-in things are electric-ink Courier Prime. If a value was written by a person (or stands in for one), it is electric blue. If it would be printed on a blank form, it is white.",
         "section": "colors"
       },
       {
-        "name": "The Stamp Rule",
-        "body": "Stamp red never decorates or carries chrome. It appears only where something has happened or been marked: selected, received, invalid, sampled, measured.",
+        "name": "The Electric Fill Rule",
+        "body": "Solid electric blue is reserved for the one pressable primary action and the one chosen day. It always carries white text and is never used as a section ground, a border colour or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Error-Only Red Rule",
+        "body": "Red appears only on an invalid field and its message. It never marks state, success, selection or decoration; those belong to electric blue.",
         "section": "colors"
       },
       {
@@ -403,28 +385,30 @@
       },
       {
         "name": "The Typewriter Rule",
-        "body": "Courier Prime is only ever a filled-in value. It is never used for headings, labels or buttons.",
+        "body": "Courier Prime is the typewriter and the numbering machine: filled-in values, form numbers, the \"Tear here\" mark. It is never used for headings, labels or buttons.",
         "section": "typography"
       },
       {
-        "name": "The Paper Only Rule",
-        "body": "Shadows belong to sheets of paper and the one pressable button. Shadows are warm (yellow-brown) on the ground and green under the green button; never neutral grey.",
+        "name": "The Lit Edge Rule",
+        "body": "Shadows belong to sheets and the one pressable button. Sheets get the lit top edge plus a black drop; the button gets an electric-blue glow. No other element casts a shadow.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** put content on paper sheets laid on the canary ground, with the paper-on-canary shadow and a rotation of no more than about 1.5deg.",
-      "**Do** draw structure with 1px form-green hairlines and box every field or data value, with a small condensed uppercase label printed in its top-left.",
-      "**Do** set every filled-in or recorded value in Courier Prime carbon blue, and everything printed in Archivo form-green.",
+      "**Do** put content on slate sheets laid on the deep slate ground, with the lifted-sheet shadow and a rotation of no more than about 1.5deg.",
+      "**Do** draw structure with 1px translucent white hairlines and box every field or data value, with a small condensed uppercase white label printed in its top-left.",
+      "**Do** set every filled-in or recorded value in Courier Prime electric ink, and everything printed in white Archivo.",
+      "**Do** keep solid electric blue for the primary button and the selected day, always with white text.",
       "**Do** use the width axis for hierarchy: 70–72% for headlines, 85% for labels.",
       "**Do** use the single ease-out curve (`cubic-bezier(0.16, 1, 0.3, 1)`) for physical paper motion, and provide a reduced-motion fallback for each animation.",
       "**Do** use perforated dot edges and numbered stubs where one sheet hands off to the next."
     ],
     "donts": [
       "**Don't** round corners on sheets, cells, fields or buttons; only radio ticks and perforation dots are round.",
-      "**Don't** use stamp red for decoration, navigation or headings; it marks state and hand marks only.",
+      "**Don't** use red for anything except an invalid field and its error message.",
+      "**Don't** set small electric-blue (`electric`) text directly on slate; use electric ink for blue text and keep the solid blue for fills.",
       "**Don't** set headings, labels or buttons in Courier Prime, or field values in Archivo.",
-      "**Don't** use neutral grey shadows or elevate anything inside a sheet except the primary button.",
+      "**Don't** elevate anything inside a sheet except the primary button.",
       "**Don't** draw form fields as filled, bordered boxes; a field is a write-in line."
     ]
   }

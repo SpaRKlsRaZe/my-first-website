@@ -16,9 +16,9 @@ const courier = Courier_Prime({
 });
 
 export const metadata = {
-  title: "Hammerwell Piano Care — tuning, regulation and repair",
+  title: "Prackt — piano tuning, regulation and repair",
   description:
-    "Piano tuning, regulation and repair at home, school or venue. Every visit ends with a written service card. (Fictional demo business.)",
+    "Piano tuning, regulation and repair at home, school or venue. Every visit ends with a written service card.",
 };
 
 export default function RootLayout({ children }) {
