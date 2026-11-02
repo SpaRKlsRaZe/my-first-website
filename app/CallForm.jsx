@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const PIANOS = ["Upright", "Grand", "Not sure"];
-const SERVICES = ["Tuning", "Pitch raise", "Regulation", "Repair", "Restoration"];
+const BUSINESSES = ["Shop", "Studio", "Trade", "Other"];
+const NEEDS = ["New website", "Redesign", "Online booking", "Online shop", "Ongoing care"];
 
-// Illustrative availability: closed Sundays, and a fixed pattern of booked days.
+// Illustrative availability: closed weekends, and a fixed pattern of booked days.
 function nextDays(count) {
   const days = [];
   const d = new Date();
@@ -13,7 +13,7 @@ function nextDays(count) {
   for (let i = 1; days.length < count; i++) {
     const day = new Date(d);
     day.setDate(d.getDate() + i);
-    const closed = day.getDay() === 0;
+    const closed = day.getDay() === 0 || day.getDay() === 6;
     const booked = !closed && (day.getDate() % 5 === 0 || day.getDate() % 7 === 3);
     days.push({
       key: day.toISOString().slice(0, 10),
@@ -27,9 +27,9 @@ function nextDays(count) {
   return days;
 }
 
-export default function VisitForm() {
+export default function CallForm() {
   const [days, setDays] = useState([]);
-  const [form, setForm] = useState({ piano: "", services: [], day: "", name: "", contact: "", note: "" });
+  const [form, setForm] = useState({ business: "", needs: [], day: "", name: "", contact: "", site: "" });
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
 
@@ -39,21 +39,21 @@ export default function VisitForm() {
     setForm((f) => ({ ...f, [field]: value }));
     setErrors((e) => ({ ...e, [field]: undefined }));
   };
-  const toggleService = (s) =>
-    set("services", form.services.includes(s) ? form.services.filter((x) => x !== s) : [...form.services, s]);
+  const toggleNeed = (s) =>
+    set("needs", form.needs.includes(s) ? form.needs.filter((x) => x !== s) : [...form.needs, s]);
 
   const chosenDay = days.find((d) => d.key === form.day);
-  const summary = [form.piano, form.services.join(", "), chosenDay && `${chosenDay.weekday} ${chosenDay.date} ${chosenDay.month}`, form.name, form.contact]
+  const summary = [form.business, form.needs.join(", "), chosenDay && `${chosenDay.weekday} ${chosenDay.date} ${chosenDay.month}`, form.name, form.contact]
     .filter(Boolean)
     .join(" · ");
 
   function submit(e) {
     e.preventDefault();
     const next = {};
-    if (!form.services.length) next.services = "Tick at least one service.";
-    if (!form.day) next.day = "Choose an open day.";
-    if (!form.name.trim()) next.name = "Add your name so we know who to ask for.";
-    if (!form.contact.trim()) next.contact = "Add a phone number or email so we can confirm.";
+    if (!form.needs.length) next.needs = "Tick at least one thing you need.";
+    if (!form.day) next.day = "Choose an open day for the call.";
+    if (!form.name.trim()) next.name = "Add your name so we know who we're talking to.";
+    if (!form.contact.trim()) next.contact = "Add an email or phone number so we can send the call invite.";
     setErrors(next);
     if (Object.keys(next).length) {
       const first = document.querySelector(`[data-field="${Object.keys(next)[0]}"]`);
@@ -70,50 +70,50 @@ export default function VisitForm() {
       <form className="sheet sheet-top" onSubmit={submit} noValidate aria-labelledby="hero-title">
         <header className="sheet-head">
           <p className="sheet-firm">
-            Prackt <span>Request a visit</span>
+            Prackt <span>Discovery call</span>
           </p>
           <p className="sheet-no" aria-label="Form number">No. 0418</p>
         </header>
 
-        <h1 id="hero-title" className="hero-title">Every visit ends in writing.</h1>
+        <h1 id="hero-title" className="hero-title">Built for your business, not from a template.</h1>
         <p className="hero-lede">
-          Tuning, regulation and repair for acoustic pianos at home, school or venue. Fill in this sheet to
-          request a visit. You keep the copy, and after the visit you get the full card.
+          Custom websites for small businesses: fast, easy to edit, and shaped around how your customers find
+          and buy from you. Book a 30-minute call below; afterwards you get a written brief.
         </p>
 
         <div className="grid">
-          <fieldset className="cell cell-piano">
-            <legend className="label">Piano</legend>
+          <fieldset className="cell cell-business">
+            <legend className="label">Your business</legend>
             <div className="ticks">
-              {PIANOS.map((p) => (
+              {BUSINESSES.map((p) => (
                 <label key={p} className="tick">
-                  <input type="radio" name="piano" value={p} checked={form.piano === p} onChange={() => set("piano", p)} />
+                  <input type="radio" name="business" value={p} checked={form.business === p} onChange={() => set("business", p)} />
                   <span>{p}</span>
                 </label>
               ))}
             </div>
           </fieldset>
 
-          <fieldset className="cell cell-service" aria-describedby={errors.services ? "err-services" : undefined}>
-            <legend className="label">Service needed</legend>
+          <fieldset className="cell cell-needs" aria-describedby={errors.needs ? "err-needs" : undefined}>
+            <legend className="label">What you need</legend>
             <div className="ticks">
-              {SERVICES.map((s, i) => (
+              {NEEDS.map((s, i) => (
                 <label key={s} className="tick">
                   <input
                     type="checkbox"
-                    data-field={i === 0 ? "services" : undefined}
-                    checked={form.services.includes(s)}
-                    onChange={() => toggleService(s)}
+                    data-field={i === 0 ? "needs" : undefined}
+                    checked={form.needs.includes(s)}
+                    onChange={() => toggleNeed(s)}
                   />
                   <span>{s}</span>
                 </label>
               ))}
             </div>
-            {errors.services && <p id="err-services" className="error">{errors.services}</p>}
+            {errors.needs && <p id="err-needs" className="error">{errors.needs}</p>}
           </fieldset>
 
           <fieldset className="cell cell-days" aria-describedby={errors.day ? "err-day" : "days-note"}>
-            <legend className="label">Visit day <span className="label-aside">next twelve days</span></legend>
+            <legend className="label">Call day <span className="label-aside">next twelve days</span></legend>
             <div className="days">
               {days.length === 0 && <p className="days-loading">Loading the diary…</p>}
               {days.map((d, i) => (
@@ -137,7 +137,7 @@ export default function VisitForm() {
             {errors.day ? (
               <p id="err-day" className="error">{errors.day}</p>
             ) : (
-              <p id="days-note" className="hint">Struck days are booked or closed. Availability shown is illustrative.</p>
+              <p id="days-note" className="hint">Struck days are booked or weekends. Availability shown is illustrative.</p>
             )}
           </fieldset>
 
@@ -156,7 +156,7 @@ export default function VisitForm() {
           </label>
 
           <label className="cell cell-contact">
-            <span className="label">Phone or email</span>
+            <span className="label">Email or phone</span>
             <input
               className="field"
               data-field="contact"
@@ -170,12 +170,12 @@ export default function VisitForm() {
           </label>
 
           <label className="cell cell-note">
-            <span className="label">What's wrong with it? <span className="label-aside">optional</span></span>
+            <span className="label">Current website <span className="label-aside">optional</span></span>
             <input
               className="field"
-              value={form.note}
-              placeholder="e.g. middle C sticks"
-              onChange={(e) => set("note", e.target.value)}
+              value={form.site}
+              placeholder="e.g. yourshop.com"
+              onChange={(e) => set("site", e.target.value)}
             />
           </label>
         </div>
@@ -186,38 +186,39 @@ export default function VisitForm() {
           </p>
         )}
         <footer className="sheet-foot">
-          <p className="foot-note">We reply within one working day to confirm a time.</p>
-          <button type="submit" className="submit">Request this visit</button>
+          <p className="foot-note">We reply within one working day with a time and a call link.</p>
+          <button type="submit" className="submit">Book a Discovery Call</button>
         </footer>
         <div className="perf perf-bottom" aria-hidden="true" />
       </form>
 
-      <aside className="sheet sheet-copy" aria-label="Your copy of the request" aria-live="polite">
+      <aside className="sheet sheet-copy" aria-label="Your copy of the booking" aria-live="polite">
         <header className="copy-head">
           <p className="copy-title">Customer copy</p>
           <p className="sheet-no">No. 0418</p>
         </header>
         <dl className="copy-rows">
-          <div><dt>Piano</dt><dd>{carbon(form.piano)}</dd></div>
-          <div><dt>Service</dt><dd>{carbon(form.services.join(", "))}</dd></div>
-          <div><dt>Visit day</dt><dd>{carbon(chosenDay?.long)}</dd></div>
+          <div><dt>Business</dt><dd>{carbon(form.business)}</dd></div>
+          <div><dt>Needs</dt><dd>{carbon(form.needs.join(", "))}</dd></div>
+          <div><dt>Call day</dt><dd>{carbon(chosenDay?.long)}</dd></div>
           <div><dt>Name</dt><dd>{carbon(form.name)}</dd></div>
           <div><dt>Contact</dt><dd>{carbon(form.contact)}</dd></div>
-          <div><dt>Note</dt><dd>{carbon(form.note)}</dd></div>
+          <div><dt>Website</dt><dd>{carbon(form.site)}</dd></div>
         </dl>
         <div className="copy-after">
-          <p className="label">After the visit this card records</p>
+          <p className="label">After the call, your written brief covers</p>
           <ul>
-            <li>Pitch found</li>
-            <li>Pitch left</li>
-            <li>What to watch</li>
+            <li>Goals</li>
+            <li>Pages</li>
+            <li>Timeline</li>
+            <li>Price</li>
           </ul>
         </div>
         {sent && (
           <div className="stamp-wrap">
             <p className="stamp" role="status">Received</p>
             <p className="stamp-note">This is a demo site, so nothing was sent.</p>
-            <button type="button" className="link-btn" onClick={() => setSent(false)}>Fill in another</button>
+            <button type="button" className="link-btn" onClick={() => setSent(false)}>Book another</button>
           </div>
         )}
       </aside>

@@ -1,158 +1,138 @@
-import VisitForm from "./VisitForm";
+import CallForm from "./CallForm";
 
-/* ---------- Sample record data (synthetic, deterministic) ---------- */
-const KEYS = 88;
-const noise = (i, s) => Math.sin(i * 12.9898 + s * 78.233) * 43758.5453 % 1;
-const found = Array.from({ length: KEYS }, (_, i) =>
-  -13 + 5 * Math.sin(i / 9) - (i > 62 ? (i - 62) * 0.38 : 0) + (i < 12 ? (12 - i) * 0.5 : 0) + noise(i, 1) * 3
-);
-const left = Array.from({ length: KEYS }, (_, i) =>
-  (i < 20 ? -(20 - i) * 0.32 : 0) + (i > 64 ? (i - 64) * 0.42 : 0) + noise(i, 2) * 0.7
-);
+/* ---------- Sample brief data (synthetic) ---------- */
+const LOAD = [
+  // page, seconds to load on a mid-range phone: before, after
+  ["Home", 6.8, 1.2],
+  ["Menu", 8.1, 1.1],
+  ["Order", 9.4, 1.6],
+  ["About", 5.2, 0.9],
+  ["Contact", 4.7, 0.8],
+];
+const LOAD_MAX = 10;
 
-const yMin = -30, yMax = 15;
-
-const isBlack = (i) => [1, 4, 6, 9, 11].includes(i % 12); // index 0 = A0
-
-function KeyChart({ W, H, PAD_L, PAD_R = 8, TOP = 12, kbH, className, marks }) {
-  const x = (i) => PAD_L + (i / (KEYS - 1)) * (W - PAD_L - PAD_R);
-  const y = (c) => TOP + ((yMax - c) / (yMax - yMin)) * (H - TOP - 20);
-  const path = (arr) => arr.map((c, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(c).toFixed(1)}`).join("");
-  const whites = [];
-  const blacks = [];
-  for (let i = 0; i < KEYS; i++) (isBlack(i) ? blacks : whites).push(i);
-  const kw = (W - PAD_L - PAD_R) / whites.length;
-  const kbTop = H + 6;
+function LoadChart() {
   return (
-    <svg className={`chart ${className}`} viewBox={`0 0 ${W} ${H + kbH + 32}`} role="img" aria-labelledby={`${className}-title ${className}-desc`}>
-      <title id={`${className}-title`}>Pitch found and pitch left across all 88 keys</title>
-      <desc id={`${className}-desc`}>
-        Sample data. Before tuning, the piano sat about 13 cents flat in the middle and further flat in the top octave.
-        After tuning, it sits on pitch through the middle, stretched slightly flat in the bass and sharp in the treble.
-      </desc>
-      {[10, 0, -10, -20, -30].map((c) => (
-        <g key={c}>
-          <line x1={PAD_L} x2={W - PAD_R} y1={y(c)} y2={y(c)} className={c === 0 ? "axis-zero" : "axis"} />
-          <text x={PAD_L - 8} y={y(c) + 4} className="axis-label" textAnchor="end">
-            {c > 0 ? `+${c}` : c}
-          </text>
-        </g>
-      ))}
-      <path d={path(found)} className="line-found" />
-      <path d={path(left)} className="line-left" />
-      <text x={x(26)} y={y(-25)} className="series-label found">pitch found</text>
-      <text x={x(26)} y={y(6)} className="series-label left">pitch left</text>
-      <g aria-hidden="true">
-        {whites.map((i, n) => (
-          <rect key={i} x={PAD_L + n * kw} y={kbTop} width={kw - 1} height={kbH} className="kw" />
+    <figure className="bars" aria-labelledby="bars-caption">
+      <dl className="bars-list">
+        {LOAD.map(([page, before, after]) => (
+          <div key={page} className="bars-row">
+            <dt>{page}</dt>
+            <dd>
+              <span className="bar bar-before" style={{ "--w": `${(before / LOAD_MAX) * 100}%` }}>
+                <span className="bar-value">{before.toFixed(1)} s<span className="visually-hidden"> before</span></span>
+              </span>
+              <span className="bar bar-after" style={{ "--w": `${(after / LOAD_MAX) * 100}%` }}>
+                <span className="bar-value">{after.toFixed(1)} s<span className="visually-hidden"> after</span></span>
+              </span>
+            </dd>
+          </div>
         ))}
-        {blacks.map((i) => {
-          const wBefore = whites.filter((w) => w < i).length;
-          return <rect key={i} x={PAD_L + wBefore * kw - kw * 0.3} y={kbTop} width={kw * 0.6} height={kbH * 0.6} className="kb" />;
-        })}
-        {marks.map(([l, i]) => (
-          <text key={l} x={x(i)} y={kbTop + kbH + 22} className="axis-label" textAnchor={i === 0 ? "start" : i === 87 ? "end" : "middle"}>{l}</text>
-        ))}
-      </g>
-    </svg>
+      </dl>
+      <div className="bars-key" aria-hidden="true">
+        <span className="key key-before">Old site</span>
+        <span className="key key-after">New site</span>
+      </div>
+      <figcaption id="bars-caption" className="chart-caption">
+        Seconds to load each page on a mid-range phone, old site against new. A slow page loses visitors
+        before they ever see what you sell.
+      </figcaption>
+    </figure>
   );
 }
 
 /* ---------- Content ---------- */
 const SERVICES = [
-  { name: "Tuning", when: "Every six to twelve months for most homes. Schools and venues often twice a year.", time: "About 1½ hours", card: "Pitch found, pitch left, what to watch" },
-  { name: "Pitch raise", when: "For a piano that hasn't been tuned in years and sits well below pitch.", time: "An extra pass, about 45 minutes", card: "Both passes recorded, plus when to re-tune" },
-  { name: "Regulation", when: "When keys feel uneven, heavy, or slow to repeat.", time: "Half a day to a full day", card: "Every adjustment made, key by key" },
-  { name: "Repair", when: "Sticking keys, broken strings, buzzing, squeaking pedals.", time: "Depends on the fault", card: "Part replaced and why" },
-  { name: "Restoration", when: "Bringing an old or inherited instrument back. Starts with a visit to assess it.", time: "Weeks, in the workshop", card: "A written assessment before any work" },
+  { name: "New website", when: "For businesses with no site yet, or one that's a single page on a builder.", time: "4–6 weeks", card: "Sitemap, page-by-page plan, launch checklist" },
+  { name: "Redesign", when: "When the site is slow, looks dated, or falls apart on a phone.", time: "3–5 weeks", card: "What to keep, what to cut, and why" },
+  { name: "Online booking", when: "Appointments, classes or tables, bookable without a phone call.", time: "1–2 weeks on top of a build", card: "The booking flow, step by step" },
+  { name: "Online shop", when: "Selling a focused range of products directly to customers.", time: "3–6 weeks", card: "Product setup and payment plan" },
+  { name: "Ongoing care", when: "Updates, fixes and small changes after launch, so the site never goes stale.", time: "Monthly", card: "A monthly note of everything changed" },
 ];
 
-const LOG = [
-  ["0:00", "Listen first", "We play it through and ask what's been bothering you."],
-  ["0:10", "Measure", "Every key is measured before anything is touched. That's the pitch found."],
-  ["0:20", "Tune", "Unisons, then octaves outwards, stretched the way your piano's strings want."],
-  ["1:15", "Check and play", "Small fixes while we're there: a sticking key, a loose pedal."],
-  ["1:30", "Write the card", "Pitch left, what we did, and what to watch before next time. You keep a copy."],
+const PROCESS = [
+  ["Day 1", "Discovery call", "Thirty minutes about your business, your customers, and what the site has to do."],
+  ["Week 1", "Written brief", "Goals, pages, features, timeline and price, in writing before anything is designed."],
+  ["Week 2", "Design", "The key pages designed with your real content, reviewed together on a call."],
+  ["Weeks 3–5", "Build", "Built fast and accessible, tested on phones first, with a preview link throughout."],
+  ["Week 6", "Launch and handover", "We launch, then walk you through editing it yourself. You keep a written guide."],
 ];
 
 export default function Page() {
   return (
     <>
-      <a className="skip" href="#request">Skip to the visit form</a>
+      <a className="skip" href="#book">Skip to the booking form</a>
       <nav className="masthead" aria-label="Main">
         <a className="mark" href="#top">
           <svg viewBox="0 0 24 24" aria-hidden="true" className="mark-icon">
-            <path d="M8 3v8a4 4 0 0 0 8 0V3M12 15v6M9 21h6" />
+            <rect x="3" y="4" width="18" height="16" rx="1" />
+            <path d="M3 9h18M7 13h6M7 16h4" />
           </svg>
           Prackt
         </a>
         <ul>
           <li><a href="#services">Services</a></li>
-          <li><a href="#record">The card</a></li>
-          <li><a href="#visit">A visit</a></li>
+          <li><a href="#brief">The brief</a></li>
+          <li><a href="#process">Process</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a className="nav-cta" href="#book">Book a Discovery Call</a></li>
         </ul>
       </nav>
 
       <main id="top">
-        <section className="hero" id="request" aria-label="Request a visit">
-          <VisitForm />
+        <section className="hero" id="book" aria-label="Book a discovery call">
+          <CallForm />
         </section>
 
-        <section className="record" id="record" aria-labelledby="record-title">
+        <section className="record" id="brief" aria-labelledby="record-title">
           <div className="record-sheet">
             <header className="record-head">
-              <h2 id="record-title">What the card tells you</h2>
-              <p className="sample-flag">Sample record · synthetic data</p>
+              <h2 id="record-title">What the brief tells you</h2>
+              <p className="sample-flag">Sample brief · synthetic data</p>
             </header>
             <div className="record-meta">
-              <p><span className="label">Piano</span><span className="typed">Upright, 1974</span></p>
-              <p><span className="label">Last tuned</span><span className="typed">About 3 years ago</span></p>
-              <p><span className="label">Pitch found at A4</span><span className="typed">434.6 Hz</span></p>
-              <p><span className="label">Pitch left at A4</span><span className="typed">440.0 Hz</span></p>
+              <p><span className="label">Business</span><span className="typed">Neighbourhood bakery</span></p>
+              <p><span className="label">Old site</span><span className="typed">One page, built 2019</span></p>
+              <p><span className="label">Pages planned</span><span className="typed">5, plus online orders</span></p>
+              <p><span className="label">Launch</span><span className="typed">6 weeks from brief</span></p>
             </div>
-            <KeyChart className="chart-wide" W={880} H={240} PAD_L={44} kbH={40} marks={[["A0", 0], ["C4", 39], ["A4 · 440 Hz", 48], ["C8", 87]]} />
-            <KeyChart className="chart-narrow" W={400} H={260} PAD_L={34} PAD_R={4} kbH={30} marks={[["A0", 0], ["A4 · 440 Hz", 48], ["C8", 87]]} />
-            <p className="chart-caption">
-              Cents away from true pitch on every key, before and after. A hundred cents make a semitone, so
-              thirteen cents flat is enough to sound sour next to a recording or another instrument.
-            </p>
+            <LoadChart />
             <div className="record-notes">
-              <p className="label">What to watch</p>
+              <p className="label">Notes for the owner</p>
               <p className="typed">
-                Room is dry in winter. Keep it away from the radiator. Two hammers in the top octave are wearing
-                and are fine for now; check them next visit.
+                The menu changes every season, so you edit it yourself from your phone. Orders open before the
+                holiday rush; we check the order page again two weeks after launch.
               </p>
             </div>
             <div className="record-sign">
-              <p><span className="label">Technician</span><span className="signature" aria-label="Signed">Prackt · J.M.</span></p>
-              <p><span className="label">Next visit due</span><span className="typed">May 2027</span></p>
+              <p><span className="label">Prepared by</span><span className="signature" aria-label="Signed">Prackt · J.M.</span></p>
+              <p><span className="label">Next check-in</span><span className="typed">May 2027</span></p>
             </div>
           </div>
         </section>
 
         <section className="services" id="services" aria-labelledby="services-title">
-          <h2 id="services-title">Services, from most often needed</h2>
+          <h2 id="services-title">What we build, from most asked for</h2>
           <ol className="service-list">
             {SERVICES.map((s, i) => (
               <li key={s.name} className={`service rank-${i + 1}`}>
                 <h3>{s.name}</h3>
                 <p className="service-when">{s.when}</p>
                 <dl className="service-tag">
-                  <div><dt>Takes</dt><dd>{s.time}</dd></div>
-                  <div><dt>On the card</dt><dd>{s.card}</dd></div>
+                  <div><dt>Typical time</dt><dd>{s.time}</dd></div>
+                  <div><dt>In the brief</dt><dd>{s.card}</dd></div>
                 </dl>
               </li>
             ))}
           </ol>
-          <p className="price-note">Prices are not listed on this demo site.</p>
+          <p className="price-note">Every project is priced in the written brief, before work begins.</p>
         </section>
 
-        <section className="visit" id="visit" aria-labelledby="visit-title">
-          <h2 id="visit-title">How a tuning visit runs</h2>
-          <p className="visit-lede">At homes, schools, churches and small venues. A typical tuning, timed:</p>
+        <section className="visit" id="process" aria-labelledby="process-title">
+          <h2 id="process-title">How a project runs</h2>
+          <p className="visit-lede">From first call to a site you can run yourself, in about six weeks:</p>
           <ol className="log">
-            {LOG.map(([t, h, p]) => (
+            {PROCESS.map(([t, h, p]) => (
               <li key={t}>
                 <span className="log-time">{t}</span>
                 <h3>{h}</h3>
@@ -166,14 +146,14 @@ export default function Page() {
       <footer className="close" id="contact">
         <div className="perf" aria-hidden="true"><span>Tear here</span></div>
         <div className="close-inner">
-          <h2>Piano sounding sour?</h2>
-          <a className="submit close-cta" href="#request">Fill in the request sheet</a>
+          <h2>Ready for a website that works for you?</h2>
+          <a className="submit close-cta" href="#book">Book a Discovery Call</a>
           <dl className="contacts">
             <div><dt>Phone</dt><dd>(555) 010-0418</dd></div>
             <div><dt>Email</dt><dd><a href="mailto:hello@prackt.example">hello@prackt.example</a></dd></div>
-            <div><dt>Hours</dt><dd>Mon–Sat, 8:00–18:00</dd></div>
+            <div><dt>Hours</dt><dd>Mon–Fri, 9:00–17:30</dd></div>
           </dl>
-          <p className="fiction">The phone number, email address, opening hours, availability and sample record on this page are placeholder content.</p>
+          <p className="fiction">The phone number, email address, hours, availability, timings and sample brief on this page are placeholder content.</p>
         </div>
       </footer>
     </>

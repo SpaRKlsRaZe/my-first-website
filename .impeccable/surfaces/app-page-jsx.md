@@ -5,21 +5,21 @@ primary_target: "app/page.jsx"
 related_targets: []
 ---
 
-# Landing page — Prackt
+# Landing page — Prackt (design agency)
 
 Mode: Persuade. Code-led build (no image generation available).
 
-Audience: whoever looks after an acoustic piano (parent, teacher, school or venue manager). Job: trust the technician and request a visit. Action: the visit-request form, working, in the first viewport. Proof: a sample service record (labelled synthetic). Constraints: no invented prices, reviews, customers; contact details are placeholders.
+Audience: small-business owners whose website is missing, dated, slow or templated. Job: trust Prackt to build something custom and book a discovery call. Action: "Book a Discovery Call", working in the first viewport and repeated in the masthead. Proof: a sample written brief with page load times, old site against new (labelled synthetic). Constraints: no invented prices, clients, testimonials or awards; contact details are placeholders.
 
 ## Direction contract
 
-THESIS: The page is a snap-out triplicate service form: you fill in the top sheet to request a visit, and the carbon copies underneath show what you'll get back in writing. It refuses the usual piano-keys photo, services grid and testimonial row.
+THESIS: The page is a snap-out triplicate booking form: you fill in the top sheet to book a discovery call, and the copy underneath shows what you get back in writing (a brief covering goals, pages, timeline and price). It refuses the usual agency hero of a big claim, device mockups and logo wall.
 
 OWN-WORLD: Palette pinned by the user (2026-11-01): a premium dark theme. The ground is deep slate (#0F141A). The top sheet is a raised slate panel (#19212B) and the customer copy a cooler slate (#1F2A37), fanned behind it. Printed labels, rules and headlines are crisp white, with rules as translucent white hairlines. Filled-in values are electric-blue text (#6EA2FF) in Courier Prime. Electric blue (#2E6BFF) is the brand accent fill: the primary button and the selected day. The RECEIVED stamp and the sample flag use its lighter text tint (#6EA2FF). A separate red is used only for errors. Headlines and labels are Archivo, condensed and heavy. Sheet edges are perforated, stubs are numbered, and fields are boxed with hairlines.
 
-STORY: The visitor sees a form they can fill in right now. While they type, their entries appear in carbon on the copy beneath. Below that, a completed sample record shows pitch found and pitch left across all 88 keys. Services are ranked by how often a piano needs them, followed by a visit log, then a perforated close with contacts.
+STORY: The visitor sees a form they can fill in right now. While they type, their entries appear on the copy beneath. Below that, a sample brief shows what Prackt writes after a call, with load times of the old site against the new one. Services are ranked by how often they're asked for, then a week-by-week project timeline, then a perforated close with a second "Book a Discovery Call" and contacts.
 
-FIRST VIEWPORT: The slate ground fills the screen. A large raised top sheet takes most of the width, with its form header ("Prackt · Request a visit") and the headline "Every visit ends in writing." The working fields are piano type, service, a strip of the next 12 days (booked days struck through) and name/contact, with the submit control at the bottom right of the sheet. The customer copy shows below and to the right, live-filling.
+FIRST VIEWPORT: The slate ground fills the screen. The masthead carries the wordmark, section links and an electric "Book a Discovery Call" button. A large raised top sheet takes most of the width, with its header ("Prackt · Discovery call") and the headline "Built for your business, not from a template." The working fields are business type, what you need, a strip of the next 12 days (booked days and weekends struck through), name, contact and current website, with "Book a Discovery Call" at the bottom right of the sheet. The customer copy is fanned to the right and fills in live.
 
 FORM: The Service Card, my top-ranked grounded candidate (pick). seed:1ce0c18092f44d0c
 

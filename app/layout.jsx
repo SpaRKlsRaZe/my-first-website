@@ -16,9 +16,9 @@ const courier = Courier_Prime({
 });
 
 export const metadata = {
-  title: "Prackt — piano tuning, regulation and repair",
+  title: "Prackt — custom websites for small businesses",
   description:
-    "Piano tuning, regulation and repair at home, school or venue. Every visit ends with a written service card.",
+    "Prackt designs and builds custom, fast, easy-to-edit websites for small businesses. Book a discovery call.",
 };
 
 export default function RootLayout({ children }) {
